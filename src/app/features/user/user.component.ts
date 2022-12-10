@@ -26,13 +26,9 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.user$ = this.userService.getUserById()
     .pipe(first())
-    // .subscribe((user) => this.user = user)
   }
 
   oneditUser(data: editUserFormData){
-    console.log(data);
-    
     this.userService.editUser(data)
-
   }
 }

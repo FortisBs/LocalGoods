@@ -20,8 +20,6 @@ export class UserService {
   }
 
   editUser(data: editUserFormData){
-    console.log('service edit');
-    
     return this.http.put<IUser>(environment.webApiUrl + 'Users/' + this.userId, data)
       .subscribe((res)=> console.log(res)
       )
